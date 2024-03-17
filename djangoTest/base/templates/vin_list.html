@@ -1,0 +1,23 @@
+<table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Equipment Code</th>
+        <th>Year of Issue</th>
+        <th>Serial Number</th>
+        <th>Place of Production</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for vin in vins %}
+      <tr>
+        <td>{{ vin.version }}</td>
+        <td>{{ vin.equipment_code }}</td>
+        <td>{{ vin.year_of_issue }}</td>
+        <td>{{ vin.serial_number }}</td>
+        <td>{{ vin.place_of_production }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
