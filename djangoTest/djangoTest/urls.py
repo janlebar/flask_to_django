@@ -15,13 +15,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse  # Import HttpResponse instead of HttpRequest
+from django.urls import path, include
 
-def home(request):
-    return HttpResponse('Home page')  # Return HttpResponse with your response content
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', include('base.urls'))
+
 ]

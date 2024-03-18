@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
 from .forms import VINForm
 import requests
+from django.http import HttpResponse
+
+def home(request):
+    return render(request,'home.html')  # Return HttpResponse with your response content
+
 
 def generate_vin(request):
     if request.method == 'POST':
