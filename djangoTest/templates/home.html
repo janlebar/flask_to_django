@@ -1,1 +1,18 @@
-<h1>fart</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIN Generator</title>
+</head>
+<body>
+    <h1>VIN Generator</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Generate">
+    </form>
+    {% if vin_generated %}
+        <p>Generated VIN: {{ vin_generated }}</p>
+    {% endif %}
+</body>
+</html>

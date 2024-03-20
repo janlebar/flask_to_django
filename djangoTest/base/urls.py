@@ -1,13 +1,7 @@
-from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse  # Import HttpResponse instead of HttpRequest
-from . import views
-
-
+from .views import home, add_vin_to_database
 
 urlpatterns = [
-
-    path('', views.home, name='home'),
-    path('generate_vin/', views.generate_vin, name='generate_vin'),
-    path('vin_list/', views.vin_list, name='vin_list'),
+    path('', home, name='home'),
+    path('add_vin/', add_vin_to_database, name='add_vin'),
 ]
